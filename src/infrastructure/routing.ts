@@ -1,16 +1,18 @@
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HelloWorld from '../components/HelloWorld.vue';
-import Index from '../components/Index.vue';
+import Home from '/src/interfaces/presenters/components/Home.vue';
+import Index from '/src/interfaces/presenters/components/Index.vue';
 import Login from '/src/interfaces/presenters/templates/Login.vue'
 
-import NotFound from "../components/NotFound.vue";
+import NotFound from "/src/interfaces/presenters/components/NotFound.vue";
+import TodoList from "/src/interfaces/presenters/templates/TodoList.vue";
 
 
 const routers: Array<RouteRecordRaw> = [
 	{
 		path: '/',
-		component: HelloWorld,
+		name: 'home',
+		component: Home,
 	},
 	{
 		path: '/hello',
@@ -21,6 +23,11 @@ const routers: Array<RouteRecordRaw> = [
 		path: '/login',
 		name: 'login',
 		component: Login,
+	},
+	{
+		path: '/todos',
+		name: 'todos',
+		component: TodoList
 	},
 	{
 		path: '/:pathMatch(.*)*',

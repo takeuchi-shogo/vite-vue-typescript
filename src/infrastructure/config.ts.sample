@@ -1,0 +1,14 @@
+
+import axios, { AxiosInstance } from 'axios'
+
+const config: AxiosInstance = axios.create({
+
+	baseURL: '指定のURL',
+
+	headers: {
+		'Content-type': 'application/json',
+	}
+})
+
+
+export default config
