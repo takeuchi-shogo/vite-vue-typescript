@@ -1,18 +1,18 @@
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from '/src/interfaces/presenters/components/Home.vue';
 import Index from '/src/interfaces/presenters/components/Index.vue';
 import Login from '/src/interfaces/presenters/templates/Login.vue'
 
 import NotFound from "/src/interfaces/presenters/components/NotFound.vue";
 import TodoList from "/src/interfaces/presenters/templates/TodoList.vue";
+import TopPage from "../interfaces/presenters/templates/TopPage.vue";
 
 
 const routers: Array<RouteRecordRaw> = [
 	{
 		path: '/',
-		name: 'home',
-		component: Home,
+		name: 'top',
+		component: TopPage,
 	},
 	{
 		path: '/hello',

@@ -16,14 +16,17 @@
 		},
 		methods: {
 			getUsers() {
-				console.log('ボタンが押されました')
+				// console.log('ボタンが押されました')
 				api.getList()
 					.then((response) => {
 						this.users = response.data
-						console.log(response.data)
+						// console.log(response.data)
 					})
 			}
 		},
+		mounted() {
+			this.getUsers()
+		}
 	})
 
 </script>
@@ -31,7 +34,7 @@
 
 <template>
 	ここはメイン画面です
-	<button @click="getUsers">クリック</button>
+	<button @click="getUsers">再取得する</button>
 	<ul>
 		<li v-for="user in users">
 			{{ user }}

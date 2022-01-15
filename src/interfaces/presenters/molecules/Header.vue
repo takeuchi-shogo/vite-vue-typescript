@@ -1,4 +1,4 @@
 
 <template>
-	<a><router-link :to="{ name: 'home' }">Home</router-link></a>
+	<a><router-link :to="{ name: 'top' }">Home</router-link></a>
 </template>
