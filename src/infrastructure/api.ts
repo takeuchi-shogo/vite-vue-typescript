@@ -9,6 +9,18 @@ class Api {
 	create(data: any): Promise<any> {
 		return config.post('/users', data)
 	}
+
+	createTodo(data: any): Promise<any> {
+		return config.post('/todos', data)
+	}
+
+	getTodoList() :Promise<any> {
+		return config.get('/todos')
+	}
+
+	getTodo(id: any): Promise<any> {
+		return config.get(`/todos/${ id }`)
+	}
 }
 
 

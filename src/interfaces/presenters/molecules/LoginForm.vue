@@ -18,6 +18,7 @@
 			login() {
 				let data = {
 					display_name: this.user.display_name,
+					password: this.user.password,
 				}
 				api.create(data)
 					.then(() => {
@@ -56,7 +57,7 @@
 					>
 				</li>
 			</ul>
-			<button @click="login">作成</button>
+			<button @click="login">ログイン</button>
 		</form>
 	</div>
 </template>

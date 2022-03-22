@@ -3,12 +3,12 @@
 
 	import { defineComponent } from 'vue';
 	import api from '../../../infrastructure/api';
+	import TodoForm from '/src/interfaces/presenters/molecules/TodoForm.vue'
+	import TodoItem from '/src/interfaces/presenters/molecules/TodoItem.vue'
 
-	// let users: any
-	// users = api.getList()
 
 	export default defineComponent({
-		name: 'Main',
+		name: "Main",
 		data() {
 			return {
 				users: [],
@@ -19,14 +19,15 @@
 				// console.log('ボタンが押されました')
 				api.getList()
 					.then((response) => {
-						this.users = response.data
-						// console.log(response.data)
-					})
+					this.users = response.data;
+					// console.log(response.data)
+				});
 			}
 		},
 		mounted() {
-			this.getUsers()
-		}
+			this.getUsers();
+		},
+		components: { TodoForm, TodoItem }
 	})
 
 </script>
@@ -40,4 +41,6 @@
 			{{ user }}
 		</li>
 	</ul>
+	<TodoForm/>
+	<TodoItem/>
 </template>
